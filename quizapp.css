@@ -1,0 +1,43 @@
+body{
+ background-color: rgb(0, 0, 0);
+}
+
+.quiz-sec{
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: aliceblue;
+    /* align-items: center; */
+    /* align-content: space-around; */
+    text-align: center;
+    max-width: 700px;
+}
+
+.quiz{
+
+    margin: 1%;
+    padding: 2%;
+    height: 400px;
+    flex-direction: column;
+    background-color: rgb(255, 178, 204);
+    border-radius: 20px;
+    align-content: auto;
+    
+}
+
+.ans{
+    margin-right: 10px;
+    display: block;
+    font-size: 26px;
+    
+}
+
+.ans label{
+    position:fixed;
+    top: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
