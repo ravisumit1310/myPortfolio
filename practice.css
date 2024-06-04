@@ -1,108 +1,161 @@
-body{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* creating main scrren ui */
+.main-screen{
     display: flex;
-    background-color: rgb(255, 255, 255);
-    /*align-items: center;
-    align-content: center;*/
-    justify-content: center;
-    padding: auto;
-}
-
-.sec{
-    display: none;
-    background-color: #ffffff;
-    margin-bottom: 3px;
-}
-
-
-#sec-1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* margin-top: 2%; */
-    background-color: rgb(253, 214, 248);
-    /* height: fit-content; */
-    padding: 10%;
-    height: 70%;
-    width: 70%;
-    /* border-top-left-radius: 20px;
-    border-top-right-radius: 20px; */
-    border-radius: 25px;
-}
-
-.sec-01{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1%;
-    background-color: rgb(230, 255, 240);
-    border-radius: 90%;
-    height: 25%;
-    width: 25%;
-}
-
-.sec-01 img{
-    border-radius:80%;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.text-01{
-    text-align: center;
-}
-
-.myname{
-    color: rgb(5, 48, 1);
-}
-
-.skill-list{
-    display: flex;
-    /* align-items:flex-start; */
-    /* flex-wrap: wrap; */
-    justify-content: space-between;
-    max-width: 500px;
-    margin: auto;
-}
-
-.list{
-    flex: 0 0 35%;
-    text-align: left;
-}
-
-#sec-11{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(169, 214, 186);
-    padding: 10%;
-    height: 70%;
-    width: 70%;
-    border-radius: 25px;
-}
-
-#sec-111{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(133, 177, 190, 0.897);
-    padding: 10%;
-    height: 70%;
-    width: 70%;
-    border-radius: 25px;
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    height: 80%;
-    align-items: center;
-    justify-content: center;
-    margin-top: 40px;
-    padding: 5%;
+    width: 100%;
+    height: 100vh;
+    padding: 0 5%;
+    background-image: linear-gradient(rgba(121, 104, 121, 0.22),rgba(121, 104, 121, 0.22));
     border-radius: 20px;
-    background-color:white
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Arranging nav bar*/
+.head-options{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    padding: 20px 8%;
+    align-items: center;
+    justify-content: space-between;
+
+    /* now adding howring effect */
+    background-color: transparent;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.head-options a{
+    float: left;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    font-size: 22px;
+    transition: 0.6s;
+}
+
+.head-options a:hover{
+    color: green;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    opacity: 0.8;
+    font-size: 30px;
+    font-weight: 900;
+
+}
+
+.head-options a.active{
+    color: whitesmoke;
+    pa
+}
+
+nav .logo{
+    width: 90px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+/* making the center Logo */
+.name-content{
+    text-align: center;
+    position: relative;
+}
+
+.name-content h3{
+    font-size: 120px;
+    font-family: "Luxurious Roman", serif;
+    -webkit-text-stroke: 2px aliceblue;
+    color: transparent;
+    font-weight: 600;
+    transition: 0.4s;
+    position: relative;
+    top: -90px;
+    width: 100%;
+}
+
+.name-content h3:hover{
+    color: aliceblue;
+}
+
+.name-content h1{
+    font-family: "Kode Mono", monospace;
+    font-size: 160px;
+    color: aliceblue;
+    font-weight: 600;
+    transition: 0.4s;
+    position: relative;
+    top: -90px;
+}
+
+.name-content h1:hover{
+    -webkit-text-stroke: 2px aliceblue;
+    color: transparent;
+}
+
+/* Old linkedin button */
+.name-content a{
+    text-decoration: none;
+    display: inline-block;
+    color:aliceblue;
+    font-size: 24px;
+    border: 2px solid #f09595;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+    position: relative;
+    top: -100px;
+    transition: 0.3s;
+}
+
+.name-content a:hover{
+    fill-opacity: 0.8;
+    background-color: rgb(4, 126, 197);
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+/* putting video to the background */
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire area */
+    z-index: -1;
+    filter: blur(7px);
+}
+
+@media(min-aspect-ratio: 16/9){
+    .bg-video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media(max-aspect-ratio: 16/9){
+    .bg-video{
+        width: auto;
+        height: 100%;
+    }
 }
